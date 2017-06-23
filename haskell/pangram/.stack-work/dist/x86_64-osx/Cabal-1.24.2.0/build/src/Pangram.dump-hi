@@ -1,0 +1,91 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-23 17:01:40.715386 UTC
+
+interface pangram-1.0.0.2-8PrzaModOsG8hLxgSxZWeB:Pangram 8002
+  interface hash: 56a1b14059f9982a53ef8fc156beb847
+  ABI hash: 4e123c3b63012d17dec90fa8f8e6f7c6
+  export-list hash: ce5240f2dccf94db277e862d2d5c66f8
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Pangram.isPangram
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Char 01433d23661edb6e5ef1536ef1e6774c
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Unicode a175ecf20bf1272d9ae31337e7da43ab
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+394187297df0dc34d227963899771af3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Pangram.$trModule2
+                   Pangram.$trModule1) -}
+940e55c862e62f9b6e9b948e81e91ac0
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Pangram"#) -}
+67a4fde123181c47504f77890108297b
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "pangram-1.0.0.2-8PrzaModOsG8hLxgSxZWeB"#) -}
+7283eb7cd69c8f8dbccbc11dbfe4548c
+  isPangram :: GHC.Base.String -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Pangram.isPangram1
+                  `cast`
+                (<[GHC.Types.Char]>_R ->_R Data.Monoid.N:All[0]) -}
+1ffc9f446ec2a61cc00750c957594998
+  isPangram1 :: [GHC.Types.Char] -> Data.Monoid.All
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: [GHC.Types.Char]) ->
+                 let {
+                   x1 :: [GHC.Types.Char]
+                   = GHC.Base.map
+                       @ GHC.Types.Char
+                       @ GHC.Types.Char
+                       GHC.Unicode.toLower
+                       x
+                 } in
+                 letrec {
+                   go :: [GHC.Types.Char] -> Data.Monoid.All
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [GHC.Types.Char]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.True `cast` (Sym (Data.Monoid.N:All[0]))
+                       : y ys
+                       -> case GHC.List.elem
+                                 @ GHC.Types.Char
+                                 GHC.Classes.$fEqChar
+                                 y
+                                 x1 of wild1 {
+                            GHC.Types.False
+                            -> GHC.Types.False `cast` (Sym (Data.Monoid.N:All[0]))
+                            GHC.Types.True -> go ys } }
+                 } in
+                 go Pangram.isPangram2) -}
+6d34e7406739ab2f7ff75b5553486d4a
+  isPangram2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Enum.eftChar 97# 122#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
